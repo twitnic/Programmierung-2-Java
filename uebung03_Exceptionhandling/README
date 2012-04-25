@@ -1,0 +1,3 @@
+## Feedback des Tutors ##
+Kommentar: getDim() prüft keine null-Zeilen, ansonsten ok
+Status: Bestanden
