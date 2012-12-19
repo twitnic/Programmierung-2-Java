@@ -3,14 +3,15 @@ package matrix;
 public class Main {
 
 	
-	/*es muessen 3 parameter ueber die commandline mitgegeben werden:
-	/ 1 spalte matrix eins
-	/ 2 zeile matrix eins und spalte matrix zwei
-	/ 3 zeilen matrix zwei*/
+	/**
+	/ es muessen 3 parameter ueber die commandline mitgegeben werden:
+	/ @param 1 spalte matrix eins
+	/ @param 2 zeile matrix eins und spalte matrix zwei
+	/ @param 3 zeilen matrix zwei
+	*/
 	
 	static MatrixTools mTools = new MatrixTools();
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		int m = Integer.parseInt(args[0]);//Spalte 1
 		int n = Integer.parseInt(args[1]);//Zeile 1 und Spalte 2
