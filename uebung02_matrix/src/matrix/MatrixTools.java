@@ -2,18 +2,27 @@ package matrix;
 
 public class MatrixTools {
 	
-	public int[][] createMatrix(int m, int n)
-	{
-		
+	public int[][] createMatrix(int m, int n) {
+	/**
+	 * @param m Spalten
+	 * @param n Zeilen
+	 */
+
 		int matrix[][]=new int [m][n];
 		for (int i=0; i<m; i++)
+		{
 			for (int j=0; j<n; j++)
-		    matrix[i][j]=(int) (Math.random()*10);
+			{
+				matrix[i][j]=(int) (Math.random()*10);
+			}
+		}
 		return matrix;
 	}
 	
-	public void printMatrix(int matrix[][])
-	{
+	public void printMatrix(int matrix[][]) {
+		/**
+		 * @param matrix die ausgegeben werden soll
+		 */
 		
 		if (matrix==null) System.out.println("keine Matrix");
 		else
@@ -21,22 +30,22 @@ public class MatrixTools {
 			int m = matrix.length;
 			int n = matrix[0].length;
 			
-			for(int i=0; i<m; i++)
+			for(int i=0; i<n; i++)
 			{
-				for(int j=0; j<n; j++)
+				for(int j=0; j<m; j++)
 				{
-					System.out.printf(" %d",matrix[i][j]);
-					System.out.printf("\n");
+					System.out.printf(" %d",matrix[j][i]);
+					//System.out.printf("\n");
 				}
 				System.out.printf("\n");
 			}
+			System.out.printf("\n");
 		}
 	}
 
-	public int[][] matrixMul(int a[][], int b[][]){
-
+	public int[][] matrixMul(int a[][], int b[][])
+	{
 		int R[][] = null;
-
 		R = new int[a.length][b[0].length];
 		
 		for(int i=0; i<a.length; i++)
